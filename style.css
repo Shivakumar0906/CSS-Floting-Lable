@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500&display=swap');
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+:root {
+    font-family: 'Poppins', sans-serif;
+  /* font sizes will be relative to this */
+    font-size: 2rem;
+    font-weight: 200;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-gap: 1.5rem;
+    place-content: center;
+    min-height: 100vh;
+    border: 10px solid;
+    background-color: #199887;
+}
+
+input[type="text"]:focus {
+  outline: .3rem ridge #0003;
+  outline-offset: 0.25rem;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    font-size: 1.2rem;
+    mix-blend-mode: color-burn;
+}
+input[type="text"] {
+  position: relative;
+  font-wight: 100;
+  font-size: 1.2rem;
+  border: 0;
+  background-color: transparent;
+}
+.form-field {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #0003;
+  border-radius: 0.3em;
+  padding: 0.3rem;
+  background-color: inherit;
+  transition: 200ms ease;
+}
+.form-field > input[type="text"]:placeholder-shown + label {
+  font-size: 1.2rem;
+  top: 50%;
+  font-weight: 500;
+  background: transparent;
+  color: #1F2020B0;
+}
+input::placeholder {
+  color: transparent;
+}
+.form-field > label,
+.form-field > input[type="text"] + label, 
+.form-field > input[type="text"]:focus + label,
+.form-field > input[type="text"]:active + label,
+.form-field > input[type="text"]:not(:placeholder-shown) + label {
+  font-size: 0.8rem;
+  position: absolute;
+  left: 0%;
+  transform: translate(0, -50%);
+  font-weight: 100;
+  line-height: 0.5;
+  padding: 0;
+  top: -0.1rem;
+  background-color: inherit;
+  margin-inline: 0.25rem;
+  padding-inline: 0.2rem;
+  pointer-events: none;
+  transition: 100ms ease;
+  color: #1F2020A0;
+}
+
